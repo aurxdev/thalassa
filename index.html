@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projet Thalassa</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet"> 
+    <!-- Fichier CSS pour les icones, nécessitant une connexion internet -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+
+   
+</head>
+<body>
+    <h1>Projet: Thalassa</h1>
+    <div class="principal">
+        <div class="container">
+            <canvas id="canvas" width="400" height="300">
+                Votre navigateur ne prend pas en charge la balise canvas.
+            </canvas>
+            <div class="bouttons">
+                <button class="btn btnM" onclick="modele.mirroirV(1)">Mirroir v.</button>
+                <button class="btn btnM" onclick="modele.mirroirH(1)">Mirroir h.</button>
+                <button class="btn" onclick="modele.retour(1)">Retour</button>
+                <button class="btnFleche" onclick="modele.algo(1,0)"><i class="bi bi-arrow-right"></i></button>
+                <button class="btn" onclick="modele.effacer(1)">Effacer</button>
+            
+
+                
+                <canvas id="canvas3" width="400" height="300">
+                    Votre navigateur ne prend pas en charge la balise canvas.
+                </canvas>
+
+                <form method="post">
+                    <textarea style="color: black; margin-top: 20px; padding:5px;" id="jsonCode" rows="10" cols="52">Code JSON...</textarea>
+
+                </form>
+                <button class="btn" onclick="modele.importer(1)">Importer</button>
+                <button class="btn" onclick="modele.exporter(1)">Exporter</button>
+
+            </div>
+        </div>
+        <div class="container">
+
+            <button class="btn" onclick="modele.echanger()">Echanger</button>
+            <button class="btn" onclick="nouveauSegmentBtn()">Nouveau segment</button>
+
+        </div>
+
+        <div class="container">
+            <canvas id="canvas2" width="400" height="300">
+                Votre navigateur ne prend pas en charge la balise canvas.
+            </canvas>
+            <div class="bouttons">
+                <button class="btnFleche" onclick="modele.algo(2,0)"><i class="bi bi-arrow-left"></i></button>
+                <button class="btn" onclick="modele.retour(2)">Retour</button>
+                <button class="btn btnM" onclick="modele.mirroirV(2)">Mirroir v.</button>
+                <button class="btn btnM" onclick="modele.mirroirH(2)">Mirroir h.</button>
+                <button class="btn" onclick="modele.effacer(2)">Effacer</button>
+                <canvas id="canvas4" width="400" height="300">
+                    Votre navigateur ne prend pas en charge la balise canvas.
+                </canvas>
+                <form method="post">
+                    <textarea style="color: black; margin-top: 20px; padding:5px;" id="jsonCode2" rows="10" cols="52">Code JSON...</textarea>
+
+                </form>
+                <button class="btn" onclick="modele.importer(2)">Importer</button>
+                <button class="btn" onclick="modele.exporter(2)">Exporter</button>
+            </div>
+        
+        </div>
+
+        <div class="container">
+            <h2>Aide</h2>
+            <hr>
+            <ul>
+                <li>Au départ, il suffit de cliquer afin de commencer une polyligne.</li>
+                <li>Clic gauche permet de continuer la polyligne.</li>
+                <li>Shift+clic gauche pour terminer sa polyligne, puis permet de commencer une nouvelle polyligne (ou le boutton nouveau segment pour commencer une nouvelle polyligne directement).</li>
+                <li>Les flèches permettent d'effectuer le morphisme.</li>
+                <li>Le JSON exporté est celui des canvas en dessous, il faut donc effectuer l'algorithme de morphing pour exporter.</li>
+                <li>Le JSON importé s'affiche dans le canvas du dessus.</li>
+            </ul>
+            <h2>Changer de couleur</h2>
+            <hr>
+
+            <button class="btn" onclick="modele.changerCouleur('#4488EE')">Bleu</button>
+            <button class="btn" onclick="modele.changerCouleur('#DC4C64')">Rouge</button>
+            <button class="btn" onclick="modele.changerCouleur('#14A44D')">Vert</button>
+            <button class="btn" onclick="modele.changerCouleur('#9FA6B2')">Gris</button>
+
+
+            <h2>Vitesse de l'animation (10 à 100)</h2>
+            <hr>
+
+            <div>
+                <input type="range" id="speed" name="speed" min="10" max="100" value="20" step="10" oninput="showSpeed()">
+                <label for="speed">20</label>
+              </div>
+
+
+        </div>
+
+        
+
+    </div>
+
+    <script src="projet.js"></script>
+
+</body>
+</html>
