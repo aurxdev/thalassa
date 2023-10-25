@@ -5,7 +5,7 @@ This project is a 2D mophing application in JS, similar to the Thalassa opening 
 It allows you to create and visualize morphing between polylines.  
 The morphing algorithm means to calculate average of each segment depending on alpha.
 
-![alt text](relative%20src/thalassa.png?raw=true)
+![alt text](src/thalassa.png?raw=true)
 
 
 ## Help
