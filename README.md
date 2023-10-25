@@ -14,9 +14,9 @@ The morphing algorithm means to calculate average of each segment depending on a
 #### 2
 ![alt text](src/21.gif?raw=true)
 #### 1 to 2
-![alt text](src/2.gif?raw=true)
-#### 2 to 1
 ![alt text](src/1.gif?raw=true)
+#### 2 to 1
+![alt text](src/2.gif?raw=true)
 
 
 ## Help
