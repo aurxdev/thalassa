@@ -2,7 +2,8 @@
 # Thalassa Project
 
 This project is a 2D mophing application in JS, similar to the Thalassa opening sequence. (https://www.youtube.com/watch?v=3rHjw3Y8IMA)  
-It allows you to create and visualize morphing between polylines.  
+I developed in oriented object with immutable objects.
+This application allows you to create and visualize morphing between polylines.  
 The morphing algorithm means to calculate average of each segment depending on alpha.
 
 ![alt text](src/thalassa.png?raw=true)
